@@ -1,0 +1,29 @@
+Dmitry Kovalev;
+Classic gears,Author1,2005,123;
+Random name,Author2,1999,473;
+Just Book,Author3,2011,78;
+Not Just Book,Author4,2001,787;
+Harry Potter 1,Author5,2020,788;
+
+Andrey Kobzov;
+Harry Potter 1,JKRo,2001,311;
+Harry Potter 2,JKRo,2002,643;
+Harry Potter 3,JKRo,2004,865;
+Harry Potter 4,JKRo,2006,294;
+Harry Potter 5,JKRo,2007,195;
+Harry Potter 6,JKRo,2010,280;
+Harry Potter 7,JKRo,2016,2475;
+
+Ivan Zolo;
+Ex: A,Ex: Author A,2003,331;
+Ex: B,Ex: Author B,2007,1241;
+Ex: C,Ex: Author C,1995,32;
+Ex: D,Ex: Author D,2015,213;
+Ex: E,Ex: Author E,2018,213;
+
+Asap Rocky;
+Rock,anonymous1,1990,352;
+Clock,anonymous1,1995,321;
+Srok,anonymous5,1998,43;
+Broke,anonymous4,2019,634;
+Java,anonymous1,2024,321;
