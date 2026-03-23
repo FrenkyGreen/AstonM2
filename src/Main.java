@@ -1,13 +1,25 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import java.io.IOException;
+import java.util.Collection;
+import java.util.Comparator;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        StudentReader.readStudents("src/students.txt")
+                .stream()
+                .peek(System.out::println)
+                .map(Student::getBooks)
+                .flatMap(Collection::stream)
+                .sorted(Comparator.comparingInt(Book::getPages))
+                .distinct()
+                .filter(book -> book.getYear() > 2000)
+                .limit(3)
+                .map(Book::getYear)
+                .findFirst()
+                .ifPresentOrElse(
+                        year -> System.out.println("Год выпуска найденной книги: " + year),
+                        () -> System.out.println("Такая книга отсутствует")
+                );
     }
 }
